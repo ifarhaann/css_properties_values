@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsivness</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+      }
+      html {
+        color: white;
+
+        background: linear-gradient(90deg, #cb00ef, #8359ff);
+      }
+      .search {
+        margin: 2rem 0rem;
+        display: flex;
+        justify-content: center;
+      }
+      .search input {
+        width: 50%;
+        max-width: 22rem;
+        background-color: rgba(0, 0, 0, 0.434);
+        border: none;
+        color: white;
+        padding: 0.7rem 1rem 0.7rem 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        outline: none;
+      }
+      .search button {
+        padding: 0.7rem 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.69);
+        color: black;
+        font-weight: bold;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      h2 {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+
+        color: rgb(0, 0, 0);
+      }
+      .card {
+        max-width: 26rem;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        border-radius: 0.5rem;
+        border: none;
+        font-size: 0.7rem;
+      }
+      .head {
+        display: flex;
+        background-color: rgb(59, 59, 101);
+        padding: 1rem 0rem 1rem 0.7rem;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        gap: 0.2rem;
+      }
+      .body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        background-color: rgba(9, 3, 47, 0.814);
+        padding: 1rem 0rem 1rem 0.7rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+      .body .space {
+        margin-left: 1rem;
+      }
+      .space span {
+        color: rgb(255, 6, 209);
+        margin: 0.5rem;
+      }
+      #red {
+        width: 0.5em;
+        height: 0.5em;
+        background-color: red;
+        border-radius: 50%;
+      }
+      #orange {
+        width: 0.5em;
+        height: 0.5em;
+        background-color: rgb(255, 105, 5);
+        border-radius: 50%;
+      }
+      #green {
+        width: 0.5em;
+        height: 0.5em;
+        background-color: rgb(18, 255, 5);
+        border-radius: 50%;
+      }
+      /* Tablet */
+      @media (min-width: 768px) {
+        .container {
+          flex-wrap: wrap;
+          justify-content: center;
+          flex-direction: row;
+        }
+        .card {
+          flex: 1 1 70%;
+        }
+      }
+
+      /* Desktop */
+      @media (min-width: 1024px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search">
+      <input type="text" placeholder="can't search..." />
+      <button>Search</button>
+    </div>
+    <div class="container">
+      <div class="card">
+        <h2>Text & Font</h2>
+
+        <div class="head">
+          <span id="red"></span>
+          <span id="orange"></span>
+          <span id="green"></span>
+        </div>
+
+        <div class="body">
+          <div>
+            <span>1</span
+            ><span class="space"
+              >color: <span>red | #fff | rgb() | hsl()</span></span
+            >
+          </div>
+          <div>
+            <span>2</span
+            ><span class="space"
+              >font-size: <span>px | rem | em | %</span></span
+            >
+          </div>
+          <div>
+            <span>3</span
+            ><span class="space"
+              >font-weight: <span>normal | bold | 100 to 900</span></span
+            >
+          </div>
+          <div>
+            <span>4</span
+            ><span class="space">font-style: <span>normal | italic</span></span>
+          </div>
+          <div>
+            <span>5</span
+            ><span class="space"
+              >line-height: <span>normal | number | unit</span></span
+            >
+          </div>
+          <div>
+            <span>6</span
+            ><span class="space"
+              >text-align: <span>left | center | right | justify</span></span
+            >
+          </div>
+          <div>
+            <span>7</span
+            ><span class="space"
+              >text-transform:
+              <span>uppercase | lowercase | capitalize</span></span
+            >
+          </div>
+          <div>
+            <span>8</span
+            ><span class="space"
+              >text-decoration:
+              <span>none | underline | line-through</span></span
+            >
+          </div>
+          <div>
+            <span>9</span
+            ><span class="space"
+              >letter-spacing: <span>normal | length</span></span
+            >
+          </div>
+          <div>
+            <span>10</span
+            ><span class="space"
+              >white-space: <span>normal | nowrap | pre</span></span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Box Model & Sizing</h2>
+
+        <div class="head">
+          <span id="red"></span>
+          <span id="orange"></span>
+          <span id="green"></span>
+        </div>
+
+        <div class="body">
+          <div>
+            <span>1</span
+            ><span class="space">width: <span>auto | % | rem | px</span></span>
+          </div>
+          <div>
+            <span>2</span
+            ><span class="space">max-width: <span>none | length</span></span>
+          </div>
+          <div>
+            <span>3</span
+            ><span class="space">min-width: <span>0 | length</span></span>
+          </div>
+          <div>
+            <span>4</span
+            ><span class="space">height: <span>auto | vh | px</span></span>
+          </div>
+          <div>
+            <span>5</span
+            ><span class="space">padding: <span>length | %</span></span>
+          </div>
+          <div>
+            <span>6</span
+            ><span class="space">margin: <span>length | auto</span></span>
+          </div>
+          <div>
+            <span>7</span
+            ><span class="space"
+              >box-sizing: <span>content-box | border-box</span></span
+            >
+          </div>
+          <div>
+            <span>8</span
+            ><span class="space"
+              >overflow: <span>hidden | auto | scroll | visible</span></span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Display & Visibility</h2>
+
+        <div class="head">
+          <span id="red"></span>
+          <span id="orange"></span>
+          <span id="green"></span>
+        </div>
+
+        <div class="body">
+          <div>
+            <span>1</span
+            ><span class="space"
+              >display: <span>block | inline | inline-block</span></span
+            >
+          </div>
+          <div>
+            <span>2</span
+            ><span class="space">display: <span>flex | grid | none</span></span>
+          </div>
+          <div>
+            <span>3</span
+            ><span class="space"
+              >visibility: <span>visible | hidden</span></span
+            >
+          </div>
+          <div>
+            <span>4</span><span class="space">opacity: <span>0 → 1</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Flexbox</h2>
+
+        <div class="head">
+          <span id="red"></span>
+          <span id="orange"></span>
+          <span id="green"></span>
+        </div>
+
+        <div class="body">
+          <div>
+            <span>1</span><span class="space">display: <span>flex</span></span>
+          </div>
+          <div>
+            <span>2</span
+            ><span class="space"
+              >flex-direction: <span>row | column</span></span
+            >
+          </div>
+          <div>
+            <span>3</span
+            ><span class="space"
+              >justify-content:
+              <span>start | center | space-between</span></span
+            >
+          </div>
+          <div>
+            <span>4</span
+            ><span class="space"
+              >align-items: <span>stretch | center | start</span></span
+            >
+          </div>
+          <div>
+            <span>5</span
+            ><span class="space">flex-wrap: <span>nowrap | wrap</span></span>
+          </div>
+          <div>
+            <span>6</span><span class="space">gap: <span>length</span></span>
+          </div>
+          <div>
+            <span>7</span
+            ><span class="space">flex: <span>grow shrink basis</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Position</h2>
+
+        <div class="head">
+          <span id="red"></span>
+          <span id="orange"></span>
+          <span id="green"></span>
+        </div>
+
+        <div class="body">
+          <div>
+            <span>1</span
+            ><span class="space"
+              >position: <span>static | relative | absolute</span></span
+            >
+          </div>
+          <div>
+            <span>2</span
+            ><span class="space">position: <span>fixed | sticky</span></span>
+          </div>
+          <div>
+            <span>3</span
+            ><span class="space"
+              >top / right / bottom / left: <span>length</span></span
+            >
+          </div>
+          <div>
+            <span>4</span
+            ><span class="space">z-index: <span>number</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Transform & Transition</h2>
+
+        <div class="head">
+          <span id="red"></span>
+          <span id="orange"></span>
+          <span id="green"></span>
+        </div>
+
+        <div class="body">
+          <div>
+            <span>1</span
+            ><span class="space"
+              >transform: <span>scale | translate | rotate</span></span
+            >
+          </div>
+          <div>
+            <span>2</span
+            ><span class="space"
+              >transition: <span>property duration easing</span></span
+            >
+          </div>
+          <div>
+            <span>3</span
+            ><span class="space"
+              >transition-timing-function: <span>ease | linear</span></span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Media Queries</h2>
+
+        <div class="head">
+          <span id="red"></span>
+          <span id="orange"></span>
+          <span id="green"></span>
+        </div>
+
+        <div class="body">
+          <div>
+            <span>1</span
+            ><span class="space">@media <span>(min-width: 768px)</span></span>
+          </div>
+          <div>
+            <span>2</span
+            ><span class="space">@media <span>(min-width: 1024px)</span></span>
+          </div>
+          <div>
+            <span>3</span
+            ><span class="space">@media <span>(max-width: 600px)</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
